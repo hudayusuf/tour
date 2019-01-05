@@ -1,0 +1,124 @@
+
+
+<!-- <button class="open-button ac" style="background-color: orange; "  id="open-button" onclick="openForm()">Book Today</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Book Today</h1>
+    <p style="font-size: 12px; font-weight: 300; margin: 20px 0">Please complete the form below and one of our travel representatives will get back to you shortly.</p>
+
+    <label for="email"><b>Full Name</b></label>
+    <input type="text" placeholder="Your Name" name="text" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Your Email" name="email" required>
+
+    <label for="psw"><b>Mobile</b></label>
+    <input type="password" placeholder="Your Mobile" name="text" required>
+
+    <button type="submit" class="btn">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+background-image: linear-gradient(red, yellow);}
+* {box-sizing: border-box;
+  
+    font-family: 'Merienda', cursive;
+
+
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+  .row{
+
+  width:1140px;
+  margin:auto;
+
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+h1{
+ font-family: 'Merienda', cursive;
+}
+p{
+  font-family: 'Merienda', cursive;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body class="row">
+
+
+<h1 style="text-align: center;">Book Today</h1>
+    <p style="font-size: 12px; font-weight: 300; margin: 20px 0;text-align: center;" >Please complete the form below and one of our travel representatives will get back to you shortly.</p>
+
+<div class="container">
+  <!-- <form action="/action_page.php"> -->
+    {{msg}}
+    <form method="POST" action="send">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="email">Email</label>
+    <input type="text" placeholder="Your Email" name="email" required>
+
+    
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+
+  <!--  <input type="submit" value="Submit" >  -->
+  <button type="submit">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
